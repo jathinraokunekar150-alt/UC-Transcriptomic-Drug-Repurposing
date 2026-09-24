@@ -1,0 +1,5 @@
+Metric,Value
+Total genes analyzed,15761
+Significant DEGs,749
+Upregulated genes (log2FC > 1),542
+Downregulated genes (log2FC < -1),207
