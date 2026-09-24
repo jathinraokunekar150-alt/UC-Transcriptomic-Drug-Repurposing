@@ -84,16 +84,16 @@ The resulting clusters were interpreted as exploratory expression-based subgroup
 ## Software & Packages
 
 ### R
-DESeq2
-apeglm
-ggplot2
-pheatmap
+- DESeq2
+- apeglm
+- ggplot2
+- pheatmap
 
 ### Python
-Python 3.13.13
-pandas
-scikit-learn
-NetworkX
+- Python 3.13.13
+- pandas
+- scikit-learn
+- NetworkX
 
 ## Workflow Summary
 
