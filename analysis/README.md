@@ -97,23 +97,17 @@ NetworkX
 
 ## Workflow Summary
 
-GEO GSE243625
-      ↓
-Data Preprocessing & Filtering
-      ↓
-DESeq2 Differential Expression Analysis
-      ↓
-apeglm Log2 Fold-Change Shrinkage
-      ↓
-Significant DEG Identification
-      ↓
-DGIdb Drug–Gene Mapping
-      ↓
-Reversal-Oriented Drug Ranking
-      ↓
-Drug–Gene Network Construction
-      ↓
-K-means Exploratory Clustering
+```mermaid
+flowchart TD
+    A["GEO GSE243625<br/>45 RNA-seq Samples"] --> B["Data Preprocessing<br/>& Filtering"]
+    B --> C["DESeq2<br/>Differential Expression"]
+    C --> D["apeglm<br/>Log2FC Shrinkage"]
+    D --> E["Significant<br/>DEG Identification"]
+    E --> F["DGIdb<br/>Drug–Gene Mapping"]
+    F --> G["Reversal-Oriented<br/>Drug Ranking"]
+    G --> H["NetworkX<br/>Drug–Gene Network"]
+    E --> I["VST Expression Data"]
+    I --> J["K-means<br/>Exploratory Clustering"]
 
 Note - This repository documents the completed analytical workflow and associated research outputs rather than providing the original executable source code.
 
