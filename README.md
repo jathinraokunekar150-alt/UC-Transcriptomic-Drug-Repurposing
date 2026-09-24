@@ -60,6 +60,49 @@ An exploratory **K-means clustering** analysis was also performed to investigate
 
 > Drug candidates identified in this study are computationally prioritized hypotheses and are not validated therapeutic recommendations.
 
+## Selected Results
+
+### Principal Component Analysis
+
+PCA of variance-stabilized expression profiles showed separation among active ulcerative colitis, inactive ulcerative colitis, and healthy control samples.
+
+<p align="center">
+  <img src="figures/02_pca_plot.png" width="800">
+</p>
+
+### Differential Expression Landscape
+
+The volcano plot summarizes the statistical significance and magnitude of gene-expression changes in the active ulcerative colitis versus healthy control comparison.
+
+The analysis identified **749 significant DEGs** using `padj < 0.05` and `|log2FC| > 1`, with **542 upregulated** and **207 downregulated** genes.
+
+<p align="center">
+  <img src="figures/04_volcano_plot.png" width="800">
+</p>
+
+### Transcriptomic Expression Patterns
+
+The top-50 DEG heatmap shows distinct expression patterns across the 45 samples, with active ulcerative colitis samples exhibiting a strong inflammatory transcriptional signature and healthy controls showing contrasting expression profiles.
+
+<p align="center">
+  <img src="figures/05_top50_deg_heatmap.png" width="900">
+</p>
+
+### Drug–Gene Interaction Network
+
+The drug–gene interaction network connects prioritized candidate drugs with their associated target genes, providing a network-level view of the relationships underlying the computational repurposing analysis.
+
+<p align="center">
+  <img src="figures/07_drug_gene_network.png" width="900">
+</p>
+
+## Explore the Results
+
+- [DEG Summary](results/DEG_summary.csv) — summary of significant, upregulated, and downregulated genes
+- [Drug Ranking](results/drug_ranking.csv) — ranked candidate drugs with reversal score, target count, and final score
+- [Analysis Workflow](analysis/README.md) — detailed computational workflow and methods
+- [Dataset Information](data/README.md) — GEO accession and sample composition
+  
 ## Methods & Tools
 
 ### Transcriptomic Analysis
