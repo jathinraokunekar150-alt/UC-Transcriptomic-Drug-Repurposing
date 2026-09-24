@@ -20,26 +20,17 @@ The study used publicly available RNA-seq data from the Gene Expression Omnibus 
 
 ## Analytical Workflow
 
-```text
-GEO RNA-seq Data
-        ↓
-Data Preprocessing & Filtering
-        ↓
-Differential Expression Analysis
-        ↓
-DESeq2 + apeglm Shrinkage
-        ↓
-Significant DEG Identification
-        ↓
-Drug–Gene Interaction Mapping
-        ↓
-Transcriptomic Reversal Scoring
-        ↓
-Drug–Gene Network Analysis
-        ↓
-K-means Clustering
-        ↓
-Candidate Drug Prioritization
+```mermaid
+flowchart TD
+    A["GEO GSE243625<br/>45 RNA-seq Samples"] --> B["Data Preprocessing<br/>& Filtering"]
+    B --> C["DESeq2<br/>Differential Expression"]
+    C --> D["apeglm<br/>Log2FC Shrinkage"]
+    D --> E["Significant<br/>DEG Identification"]
+    E --> F["DGIdb<br/>Drug–Gene Mapping"]
+    F --> G["Reversal-Oriented<br/>Drug Ranking"]
+    G --> H["NetworkX<br/>Drug–Gene Network"]
+    E --> I["VST Expression Data"]
+    I --> J["K-means<br/>Exploratory Clustering"]
 ```
 
 ## Key Results
